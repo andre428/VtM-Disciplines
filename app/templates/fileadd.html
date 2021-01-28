@@ -1,0 +1,16 @@
+{% extends "main.html" %}
+
+{% block content %}
+<div><h1>Here be option to upload xlsx file</h1></div>
+
+<form method="POST" enctype="multipart/form-data">
+{{ upfile.hidden_tag() }}
+<p>
+File adder:<br>
+{{ upfile.file }}
+</p>
+
+<p>{{ upfile.submit() }}</p>
+</form>
+
+{% endblock %}

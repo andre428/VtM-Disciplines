@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div class="grid">
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2">Disciplines for {{ char_name }}</th>
+                </tr>
+                {% for dis in distable %}
+                    <tr>
+                        <th>{{ dis }}:</th>
+                        {% for td in range(distable[dis]) %}
+                            <td class="tooltip">0<span class="tooltiptext">{{ DisBase[ dis|string][loop.index] }}</span>
+                            </td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,337 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div class="grid">
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th>Name:</th>
+                    <td>{{ character.charactername | title }}</td>
+                </tr>
+                <tr>
+                    <th>Player:</th>
+                    <td>{{ character.playername | title }}</td>
+                </tr>
+                <tr>
+                    <th>Clan:</th>
+                    <td>{{ about.claninfo | title }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th>Nature:</th>
+                    <td>{{ about.nature | title }}</td>
+                </tr>
+                <tr>
+                    <th>Demeanor:</th>
+                    <td>{{ about.demeanor | title }}</td>
+                </tr>
+                <tr>
+                    <th>Role:</th>
+                    <td>{{ about.role | title }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th>Generation:</th>
+                    <td>{{ about.generation }}</td>
+                </tr>
+                <tr>
+                    <th>Sire:</th>
+                    <td>{{ about.sire | title }}</td>
+                </tr>
+                <tr>
+                    <th>Age:</th>
+                    <td>{{ about.age }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Physical</h3></th>
+                </tr>
+                <tr>
+                    <th>Strength:</th>
+                    <td>{{ attribs.strength }}</td>
+                </tr>
+                <tr>
+                    <th>Dexterity:</th>
+                    <td>{{ attribs.dexterity }}</td>
+                </tr>
+                <tr>
+                    <th>Stamina:</th>
+                    <td>{{ attribs.stamina }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Social</h3></th>
+                </tr>
+                <tr>
+                    <th>Charisma:</th>
+                    <td>{{ attribs.charisma }}</td>
+                </tr>
+                <tr>
+                    <th>Manipulation:</th>
+                    <td>{{ attribs.manipulation }}</td>
+                </tr>
+                <tr>
+                    <th>Appearance:</th>
+                    <td>{{ attribs.appearance }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Mental</h3></th>
+                </tr>
+                <tr>
+                    <th>Perception:</th>
+                    <td>{{ attribs.perception }}</td>
+                </tr>
+                <tr>
+                    <th>Intelligence:</th>
+                    <td>{{ attribs.intelligence }}</td>
+                </tr>
+                <tr>
+                    <th>Wits:</th>
+                    <td>{{ attribs.wits }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Talents</h3></th>
+                </tr>
+                <tr>
+                    <th>Alertness:</th>
+                    <td>{{ abilits.alertness }}</td>
+                </tr>
+                <tr>
+                    <th>Athletics:</th>
+                    <td>{{ abilits.athletics }}</td>
+                </tr>
+                <tr>
+                    <th>Brawl:</th>
+                    <td>{{ abilits.brawl }}</td>
+                </tr>
+                <tr>
+                    <th>Dodge:</th>
+                    <td>{{ abilits.dodge }}</td>
+                </tr>
+                <tr>
+                    <th>Empathy:</th>
+                    <td>{{ abilits.empathy }}</td>
+                </tr>
+                <tr>
+                    <th>Expression:</th>
+                    <td>{{ abilits.expression }}</td>
+                </tr>
+                <tr>
+                    <th>Intimidation:</th>
+                    <td>{{ abilits.intimidation }}</td>
+                </tr>
+                <tr>
+                    <th>Leadership:</th>
+                    <td>{{ abilits.leadership }}</td>
+                </tr>
+                <tr>
+                    <th>Streetwise:</th>
+                    <td>{{ abilits.streetwise }}</td>
+                </tr>
+                <tr>
+                    <th>Subterfuge:</th>
+                    <td>{{ abilits.subterfuge }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Skills</h3></th>
+                </tr>
+                <tr>
+                    <th>Animal Ken:</th>
+                    <td>{{ abilits.animalken }}</td>
+                </tr>
+                <tr>
+                    <th>Crafts:</th>
+                    <td>{{ abilits.crafts }}</td>
+                </tr>
+                <tr>
+                    <th>Drive:</th>
+                    <td>{{ abilits.drive }}</td>
+                </tr>
+                <tr>
+                    <th>Etiquette:</th>
+                    <td>{{ abilits.etiquette }}</td>
+                </tr>
+                <tr>
+                    <th>Firearms:</th>
+                    <td>{{ abilits.firearms }}</td>
+                </tr>
+                <tr>
+                    <th>Melee:</th>
+                    <td>{{ abilits.melee }}</td>
+                </tr>
+                <tr>
+                    <th>Performance:</th>
+                    <td>{{ abilits.performance }}</td>
+                </tr>
+                <tr>
+                    <th>Security:</th>
+                    <td>{{ abilits.security }}</td>
+                </tr>
+                <tr>
+                    <th>Stealth:</th>
+                    <td>{{ abilits.stealth }}</td>
+                </tr>
+                <tr>
+                    <th>Survival:</th>
+                    <td>{{ abilits.survival }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Knowledges</h3></th>
+                </tr>
+                <tr>
+                    <th>Academics:</th>
+                    <td>{{ abilits.academics }}</td>
+                </tr>
+                <tr>
+                    <th>Computer:</th>
+                    <td>{{ abilits.computer }}</td>
+                </tr>
+                <tr>
+                    <th>Finance:</th>
+                    <td>{{ abilits.finance }}</td>
+                </tr>
+                <tr>
+                    <th>Investigation:</th>
+                    <td>{{ abilits.investigation }}</td>
+                </tr>
+                <tr>
+                    <th>Law:</th>
+                    <td>{{ abilits.law }}</td>
+                </tr>
+                <tr>
+                    <th>Linguistics:</th>
+                    <td>{{ abilits.linguistics }}</td>
+                </tr>
+                <tr>
+                    <th>Medicine:</th>
+                    <td>{{ abilits.medicine }}</td>
+                </tr>
+                <tr>
+                    <th>Occult:</th>
+                    <td>{{ abilits.occult }}</td>
+                </tr>
+                <tr>
+                    <th>Politics:</th>
+                    <td>{{ abilits.politics }}</td>
+                </tr>
+                <tr>
+                    <th>Science:</th>
+                    <td>{{ abilits.science }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Willpower</h3></th>
+                </tr>
+                <tr>
+                    <th>Willpower:</th>
+                    <td>{{ traits.willpower }}</td>
+                </tr>
+                <tr>
+                    <th>Path Name:</th>
+                    <td>{{ traits.pathinfo }}</td>
+                </tr>
+                <tr>
+                    <th>Path Level:</th>
+                    <td>{{ traits.path_lvl }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Blood</h3></th>
+                </tr>
+                <tr>
+                    <th>Blood Pool:</th>
+                    <td>{{ traits.bloodpool }}</td>
+                </tr>
+                <tr>
+                    <th>Points Per Turn:</th>
+                    <td>{{ traits.ppt }}</td>
+                </tr>
+                <tr>
+                    <th>Created by:</th>
+                    <td>AndrE</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Virtues</h3></th>
+                </tr>
+                <tr>
+                    <th>Conscience:</th>
+                    <td>{{ traits.conscience }}</td>
+                </tr>
+                <tr>
+                    <th>Self-Control:</th>
+                    <td>{{ traits.selfcontrol }}</td>
+                </tr>
+                <tr>
+                    <th>Courage:</th>
+                    <td>{{ traits.courage }}</td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="unit">
+            <table>
+                <tr>
+                    <th colspan="2"><h3>Disciplines</h3></th>
+                </tr>
+                {% for dis in disciplines %}
+                    <tr>
+                        <th>{{ dis.disinfo }}:</th>
+                        {% for td in range(dis.dlevel) %}
+                            <td class="tooltip">&#10016;<span class="tooltiptext">{{ definition[ dis|string][loop.index]}}</span></td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+{% endblock %}

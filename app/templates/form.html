@@ -1,0 +1,497 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <h1>Form your character here:</h1>
+
+    <form action="" method="post">
+        {{ form.hidden_tag() }}
+
+        <div class="grid">
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th>Character name:</th>
+                        <td>{{ form.form_char(size=20) }}</td>
+                        <td>{% for error in form.form_player.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Player:</th>
+                        <td>{{ form.form_player(size=20) }}</td>
+                        <td>{% for error in form.form_player.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Clan:</th>
+                        <td>{{ form.form_clan() }}</td>
+                        <td>{% for error in form.form_clan.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th>Nature:</th>
+                        <td>{{ form.form_nature(size=20) }}</td>
+                        <td>{% for error in form.form_nature.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Demeanor:</th>
+                        <td>{{ form.form_demeanor(size=20) }}</td>
+                        <td>{% for error in form.form_demeanor.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Role:</th>
+                        <td>{{ form.form_role(size=20) }}</td>
+                        <td>{% for error in form.form_role.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th>Generation:</th>
+                        <td>{{ form.form_generation(size=6) }}</td>
+                        <td>{% for error in form.form_generation.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Sire:</th>
+                        <td>{{ form.form_sire(size=20) }}</td>
+                        <td>{% for error in form.form_sire.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Age:</th>
+                        <td>{{ form.form_age(size=6) }}</td>
+                        <td>{% for error in form.form_age.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th colspan="2"><h3>Physical</h3></th>
+                    </tr>
+                    <tr>
+                        <th>Strength:</th>
+                        <td>{{ form.strength(size=6) }}</td>
+                        <td>{% for error in form.strength.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Dexterity:</th>
+                        <td>{{ form.dexterity(size=6) }}</td>
+                        <td>{% for error in form.dexterity.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Stamina:</th>
+                        <td>{{ form.stamina(size=6) }}</td>
+                        <td>{% for error in form.stamina.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th colspan="2"><h3>Social</h3></th>
+                    </tr>
+                    <tr>
+                        <th>Charisma:</th>
+                        <td>{{ form.charisma(size=6) }}</td>
+                        <td>{% for error in form.charisma.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Manipulation:</th>
+                        <td>{{ form.manipulation(size=6) }}</td>
+                        <td>{% for error in form.manipulation.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Appearance:</th>
+                        <td>{{ form.appearance(size=6) }}</td>
+                        <td>{% for error in form.appearance.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th colspan="2"><h3>Mental</h3></th>
+                    </tr>
+                    <tr>
+                        <th>Perception:</th>
+                        <td>{{ form.perception(size=6) }}</td>
+                        <td>{% for error in form.perception.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Intelligence:</th>
+                        <td>{{ form.intelligence(size=6) }}</td>
+                        <td>{% for error in form.intelligence.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Wits:</th>
+                        <td>{{ form.wits(size=6) }}</td>
+                        <td>{% for error in form.wits.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th colspan="2"><h3>Talents</h3></th>
+                    </tr>
+                    <tr>
+                        <th>Alertness:</th>
+                        <td>{{ form.alertness(size=6) }}</td>
+                        <td>{% for error in form.alertness.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Athletics:</th>
+                        <td>{{ form.athletics(size=6) }}</td>
+                        <td>{% for error in form.athletics.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Brawl:</th>
+                        <td>{{ form.brawl(size=6) }}</td>
+                        <td>{% for error in form.brawl.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Dodge:</th>
+                        <td>{{ form.dodge(size=6) }}</td>
+                        <td>{% for error in form.dodge.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Empathy:</th>
+                        <td>{{ form.empathy(size=6) }}</td>
+                        <td>{% for error in form.empathy.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Expression:</th>
+                        <td>{{ form.expression(size=6) }}</td>
+                        <td>{% for error in form.expression.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Intimidation:</th>
+                        <td>{{ form.intimidation(size=6) }}</td>
+                        <td>{% for error in form.intimidation.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Leadership:</th>
+                        <td>{{ form.leadership(size=6) }}</td>
+                        <td>{% for error in form.leadership.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Streetwise:</th>
+                        <td>{{ form.streetwise(size=6) }}</td>
+                        <td>{% for error in form.streetwise.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Subterfuge:</th>
+                        <td>{{ form.subterfuge(size=6) }}</td>
+                        <td>{% for error in form.subterfuge.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th colspan="2"><h3>Skills</h3></th>
+                    </tr>
+                    <tr>
+                        <th>Animal Ken:</th>
+                        <td>{{ form.animalken(size=6) }}</td>
+                        <td>{% for error in form.animalken.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Crafts:</th>
+                        <td>{{ form.crafts(size=6) }}</td>
+                        <td>{% for error in form.crafts.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Drive:</th>
+                        <td>{{ form.drive(size=6) }}</td>
+                        <td>{% for error in form.drive.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Etiquette:</th>
+                        <td>{{ form.etiquette(size=6) }}</td>
+                        <td>{% for error in form.etiquette.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Firearms:</th>
+                        <td>{{ form.firearms(size=6) }}</td>
+                        <td>{% for error in form.firearms.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Melee:</th>
+                        <td>{{ form.melee(size=6) }}</td>
+                        <td>{% for error in form.melee.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Performance:</th>
+                        <td>{{ form.performance(size=6) }}</td>
+                        <td>{% for error in form.performance.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Security:</th>
+                        <td>{{ form.security(size=6) }}</td>
+                        <td>{% for error in form.security.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Stealth:</th>
+                        <td>{{ form.stealth(size=6) }}</td>
+                        <td>{% for error in form.stealth.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Survival:</th>
+                        <td>{{ form.survival(size=6) }}</td>
+                        <td>{% for error in form.survival.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th colspan="2"><h3>Knowledges</h3></th>
+                    </tr>
+                    <tr>
+                        <th>Academics:</th>
+                        <td>{{ form.academics(size=6) }}</td>
+                        <td>{% for error in form.academics.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Computer:</th>
+                        <td>{{ form.computer(size=6) }}</td>
+                        <td>{% for error in form.computer.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Finance:</th>
+                        <td>{{ form.finance(size=6) }}</td>
+                        <td>{% for error in form.finance.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Investigation:</th>
+                        <td>{{ form.investigation(size=6) }}</td>
+                        <td>{% for error in form.investigation.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Law:</th>
+                        <td>{{ form.law(size=6) }}</td>
+                        <td>{% for error in form.law.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Linguistics:</th>
+                        <td>{{ form.linguistics(size=6) }}</td>
+                        <td>{% for error in form.linguistics.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Medicine:</th>
+                        <td>{{ form.medicine(size=6) }}</td>
+                        <td>{% for error in form.medicine.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Occult:</th>
+                        <td>{{ form.occult(size=6) }}</td>
+                        <td>{% for error in form.occult.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Politics:</th>
+                        <td>{{ form.politics(size=6) }}</td>
+                        <td>{% for error in form.politics.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Science:</th>
+                        <td>{{ form.science(size=6) }}</td>
+                        <td>{% for error in form.science.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th>Willpower:</th>
+                        <td>{{ form.form_willpower(size=6) }}</td>
+                        <td>{% for error in form.form_willpower.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Path Name:</th>
+                        <td>{{ form.form_path_name() }}</td>
+                        <td>{% for error in form.form_path_name.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>lvl:</th>
+                        <td>{{ form.form_path_lvl(size=6) }}</td>
+                        <td>{% for error in form.form_path_lvl.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th>Blood-Pool:</th>
+                        <td>{{ form.form_bloodpool(size=6) }}</td>
+                        <td>{% for error in form.form_bloodpool.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>PPT:</th>
+                        <td>{{ form.form_ppt(size=6) }}</td>
+                        <td>{% for error in form.form_ppt.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    <tr>
+                        <th>Conscience:</th>
+                        <td>{{ form.form_conscience(size=6) }}</td>
+                        <td>{% for error in form.form_conscience.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Self-Control:</th>
+                        <td>{{ form.form_selfcontrol(size=6) }}</td>
+                        <td>{% for error in form.form_selfcontrol.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                    <tr>
+                        <th>Courage:</th>
+                        <td>{{ form.form_courage(size=6) }}</td>
+                        <td>{% for error in form.form_courage.errors %}
+                            <span style="color: red;">[{{ error }}]</span>
+                        {% endfor %}</td>
+                    </tr>
+                </table>
+            </div>
+
+            <div class="unit">
+                <table>
+                    {% for list_of_diss in form.form_disciplines %}
+                        <tr>
+                            <th>Discipline:</th>
+                            <td>{{ list_of_diss.list_disciplines() }}</td>
+                            <th>lvl:</th>
+                            <td>{{ list_of_diss.form_dlevel(size=6) }}</td>
+                        </tr>
+                    {% endfor %}
+                </table>
+            </div>
+        </div>
+
+        <p>{{ form.submit() }}</p>
+    </form>
+
+{% endblock %}

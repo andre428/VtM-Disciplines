@@ -1,0 +1,22 @@
+{% extends "main.html" %}
+
+{% block content %}
+    <div>
+        <h1>Choose character sheet to display.</h1>
+    </div>
+
+    <div>
+        {% if char_names %}
+            <ul>
+                {% for name in char_names %}
+                    <li><a href="{{ url_for('sheet', char_name=name) }}">{{ name }}</a></li>
+                {% endfor %}
+            </ul>
+        {% else %}
+            <h3>No characters added ...yet.</h3>
+            <h4><a href="{{ url_for('addform') }}">Add with form</a></h4>
+            <h4><a href="{{ url_for('addfile') }}">Add from file</a></h4>
+        {% endif %}
+
+    </div>
+{% endblock %}
