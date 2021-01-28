@@ -1,7 +1,10 @@
 import os
+import sys
 from dotenv import load_dotenv
 
 basedir = os.path.abspath(os.path.dirname(__file__))
+if hasattr(sys, '_MEIPASS'):
+    base_dir = os.path.join(sys._MEIPASS)
 load_dotenv(os.path.join(basedir, '.env'))
 
 
