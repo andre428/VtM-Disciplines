@@ -64,7 +64,7 @@ class Disciplinizer:
             self.trait_info.conscience)
 
     def bardo3(self):
-        return 'Roll: Conscience => ' + str(
+        return 'Roll: UnConscience => ' + str(
             self.trait_info.conscience)
 
     def bardo4(self):
